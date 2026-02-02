@@ -1,0 +1,12 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: Akki-8989/Infrastructure/.github/workflows/deploy-azure-implementation.yml@main
+    with:
+      repo_name: Azure_implementation
+      infra_repo: Infrastructure
+    secrets: inherit
